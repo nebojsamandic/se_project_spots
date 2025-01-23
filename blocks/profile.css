@@ -1,0 +1,36 @@
+.profile__avatar {
+    height: 190px;
+    width: 190px;
+    margin-right: 20px;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile__add_btn {
+    margin-left: auto;
+}
+
+.profile__column {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.profile__edit-btn {
+    margin-top: auto;
+}
+
+.profile__title {
+    margin: 0;
+}
+
+.profile__description {
+    margin: 0;
+}
+
+.profile__name {
+    margin-bottom: 0;
+
+}
