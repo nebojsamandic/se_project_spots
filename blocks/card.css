@@ -3,6 +3,7 @@
     object-fit: cover;
     width: 413px;
     display: block;
+    border-radius: 8px;
 }
 
 .card__like-btn {
@@ -20,6 +21,19 @@
     justify-content: space-between;
 }
 
+.card__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
 .card {
     max-width: 413px;
+}
+
+@media screen and (max-width: 630px) {
+  .card__image {
+    height: 288px;
+  }
+
 }
