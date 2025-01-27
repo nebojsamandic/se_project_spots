@@ -1,6 +1,5 @@
 .profile__avatar {
-    height: 190px;
-    width: 190px;
+    object-fit: cover;
     margin-right: 20px;
     border-radius: 8px;
 }
@@ -23,6 +22,11 @@
     border-radius: 8px;
 }
 
+.profile__add-btn:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
 .profile__add-btn-img {
   margin-right: 8px;
 }
@@ -35,16 +39,20 @@
 .profile__edit-btn {
     margin-top: auto;
     margin-bottom: 20px;
+    font-weight: 500;
     padding: 0;
     opacity: 70%;
     border: none;
     background-color: transparent;
     display: flex;
+    color: #212121;
 }
 
-.profile__title {
-    margin: 0;
+.profile__edit-btn:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
+
 
 .profile__description {
     margin: 0;
@@ -54,10 +62,14 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     max-width: 420px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 .profile__name {
-    margin-bottom: 0 0 12px;
+    margin: 0 0 12px;
     font-weight: 500;
     font-size: 32px;
     line-height: 1;
@@ -67,13 +79,13 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     max-width: 420px;
+    color: #212121;
 }
 
 @media screen and (max-width: 630px) {
   .profile {
     flex-direction: column;
     max-width: 288px;
-    max-height: 274px;
     align-items: center;
     text-align: center;
     padding-top: 20px;
