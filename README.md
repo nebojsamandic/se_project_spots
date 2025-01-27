@@ -62,3 +62,7 @@ We would then go to the project folder:
 cd se_project_spots  
 
 And then open the Index.HTML and thats it!
+
+
+Deployment Link: 
+https://nebojsamandic.github.io/se_project_spots/
