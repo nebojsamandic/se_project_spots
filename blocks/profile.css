@@ -17,8 +17,7 @@
     margin-left: auto;
     width: 149px;
     height: 52px;
-    margin-top: 138px;
-    margin-bottom: 20px;
+    margin-top: auto;
     background-color: #212121;
     color: #fcf5e5;
     border-radius: 8px;
@@ -40,7 +39,6 @@
 
 .profile__edit-btn {
     margin-top: auto;
-    margin-bottom: 20px;
     font-weight: 500;
     padding: 0;
     opacity: 70%;
