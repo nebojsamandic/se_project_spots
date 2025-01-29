@@ -24,4 +24,8 @@
   align-items: center;
   padding-bottom: 20px;
   }
+
+  .cards {
+    padding-bottom: 0;
+  }
 }
