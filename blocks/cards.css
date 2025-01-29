@@ -12,20 +12,25 @@
 
 .cards {
     padding-top: 20px;
-    padding-bottom: 36px;
 }
 
 
-/* I do not know how to make the like button not be cropped out I cant figure it out */
 
 @media screen and (max-width: 630px) {
   .cards__list {
-  grid-template-columns: repeat(auto-fit, 288px);
-  align-items: center;
-  padding-bottom: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, 288px);
+   align-items: center;
+    padding-bottom: 20px;
   }
+<<<<<<< HEAD
 
   .cards {
     padding-bottom: 0;
   }
 }
+=======
+}
+
+ 
+>>>>>>> refs/remotes/origin/main
