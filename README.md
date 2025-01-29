@@ -66,3 +66,7 @@ And then open the Index.HTML and thats it!
 
 Deployment Link: 
 https://nebojsamandic.github.io/se_project_spots/
+
+
+Video explanation link found below: Video is much longer as I got into depth 
+https://drive.google.com/file/d/1Mr_blWMw0_NHHRoeKFcZYyS2MrMUOv4U/view?usp=sharing
