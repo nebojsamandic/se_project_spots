@@ -21,11 +21,13 @@
     background-color: #212121;
     color: #fcf5e5;
     border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .profile__add-btn:hover {
     cursor: pointer;
     opacity: 80%;
+    transform: scale(1.05);
 }
 
 .profile__add-btn-img {
@@ -46,11 +48,13 @@
     background-color: transparent;
     display: flex;
     color: #212121;
+    transition: all 0.3s ease;
 }
 
 .profile__edit-btn:hover {
   opacity: 100%;
   cursor: pointer;
+  transform: scale(1.05); 
 }
 
 

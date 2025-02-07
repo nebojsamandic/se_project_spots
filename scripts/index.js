@@ -38,13 +38,16 @@ function getCardElement (data) {
 
 
 function openModal () {
+    editModal.classList.add("modal--opened");
+}
+
+function fillProfileForm () {
     editModalNameInput.Value = profileName.textContent;
-    editModalDescriptionInput.Value = profileDescription.textContent;
-    editModal.classList.add("modal__opened");
+    editModalDescriptionInput.value = profileDescription.textContent;
 }
 
 function closeModal () {
-    editModal.classList.remove("modal__opened");
+    editModal.classList.remove("modal--opened");
 }
 
 function handleEditFormSubmit(evt) {

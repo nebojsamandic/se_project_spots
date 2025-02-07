@@ -16,11 +16,13 @@
     border: none;
     background-color: transparent;
     opacity: 40%;
+    transition: all 0.3s ease;
 }
 
 .card__like-btn:hover {
   opacity: 100%;
   cursor: pointer;
+  transform: scale(1.05); 
 }
 
 .card__content {
