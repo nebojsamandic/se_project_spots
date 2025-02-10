@@ -43,6 +43,7 @@ function fillProfileForm () {
 }
 
 function openModal () {
+    fillProfileForm();
     editModal.classList.add("modal--opened");
 }
 
