@@ -107,7 +107,7 @@
 
 
 
-@media screen (max-width: 630px) {
+@media screen and (max-width: 630px) {
 
 .modal {
     padding: 0 10px;
@@ -119,7 +119,7 @@
 }
 
 .modal__title {
-    font-style: 20px;
+    font-size: 20px;
     margin-bottom: 24px;
     margin: 10px 0 34px;
 }
@@ -138,5 +138,10 @@
 
 }
 
+.modal__input {
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 500;
+}
 
 }
