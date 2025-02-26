@@ -46,6 +46,15 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.modal__close-btn_type_preview {
+    background-image: url("../images/xiconwhite.svg");
+    top: 0;
+    right: -52.5px;
+    height: 40px;
+    width: 40px;
+    background-color: unset;
+}
+
 .modal__close-btn:hover {
     opacity: 100%;
     transform: rotate(90deg);
@@ -103,6 +112,32 @@
 
 .modal__input:hover {
     border-color: #212121;
+}
+
+.modal__content_type_preview {
+    padding: 0;
+    background-color: transparent;
+    width: unset;
+}
+
+.modal__image {
+    object-fit: contain;
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+
+.modal__caption {
+    color: #212121;
+    width: 214px;
+    height: 32px;
+    margin-top: 0;
+    top: 8px;
+    margin-bottom: auto;
+    background-color: #212121, 0.5;
+    color: #fff;
+    overlay: auto;
+    
 }
 
 

@@ -25,6 +25,25 @@
   transform: scale(1.05); 
 }
 
+.card__like-btn_liked:hover {
+  background-image: url(../images/heart_hover.svg);
+  cursor: pointer;
+  transform: scale(1.05); 
+}
+
+.card__like-btn_liked {
+  background-image: url(../images/heart.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 20px;
+  border: none;
+  opacity: 100%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
 .card__content {
   margin-top: 12px;
     display: flex;
