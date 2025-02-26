@@ -27,6 +27,7 @@ const CardLinkInput = cardModal.querySelector('#add-card-link-input')
 const previewModal = document.querySelector('#preview-modal');
 const previewModalImageEl = document.querySelector('.modal__image');
 const previewModalCaptionEl = document.querySelector('.modal__caption');
+const previewModalCloseBtn = previewModal.querySelector('.modal__close-btn');
 
 const cardTemplate = document.querySelector('#card-template');
 const cardList = document.querySelector('.cards__list');
@@ -64,6 +65,13 @@ function getCardElement (data) {
         previewModalImageEl.src = data.link;
         previewModalCaptionEl.textContent = data.name;
     })
+
+
+    const cardDeleteEl = cardElement.querySelector('.card__delete');
+    cardDeleteEl.addEventListener('click', () => {
+    cardElement.remove();
+    })
+
 
      return cardElement;
 }
@@ -105,6 +113,10 @@ cardModalBtn.addEventListener("click", () => {
 cardModalCloseBtn.addEventListener("click", () =>{
     closeModal(cardModal);
 });
+
+previewModalCloseBtn.addEventListener('click', ()=> {
+    closeModal(previewModal);
+})
 
 editFormElement.addEventListener('submit', handleEditFormSubmit);
 cardForm.addEventListener('submit', handleAddCardSubmit);

@@ -62,6 +62,25 @@
   max-width: 350px;
 }
 
+.card__delete {
+  background-image: url(../images/State=Default.svg);
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: -405px;
+  left: 373px;
+  transition: all 0.3sease;
+}
+
+.card__delete:hover {
+  background-image: url(../images/State=Hover.svg);
+  transform: scale(1.05); 
+  cursor: pointer;
+}
+
 .card {
     max-width: 413px;
 }
@@ -88,4 +107,17 @@
     width: 288px;
     height: 318px;
   }
+
+
+  .card__delete {
+    left: 251px;
+    top: -282px;
+  }
+
+  .card__content {
+    top: 20px;
+    top: -33px;
+    position: relative;
+  }
+
 }

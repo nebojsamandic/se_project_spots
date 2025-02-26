@@ -12,10 +12,13 @@
     visibility: hidden;
     padding: 0 20px;
     font-family: Poppins, Arial, Helvetica, sans-serif;
+    transition: visibility 0.3s, opacity 0.3s ease-in;
+    /* no idea how to implement this transition */
 }
 
 .modal--opened {
     visibility: visible;
+
 }
 
 
@@ -178,4 +181,12 @@
     font-size: 16px;
 }
 
+.modal__image {
+    width: 288px;
+}
+.modal__close-btn_type_preview {
+    position: fixed;
+    top: 195px;
+    left: 379px;
+}
 }
