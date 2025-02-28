@@ -116,7 +116,7 @@
   border-color: #212121;
 }
 
-.modal__content_type_preview {
+.modal__container_type_preview {
   padding: 0;
   background-color: transparent;
   width: unset;
@@ -175,18 +175,18 @@
   .modal__image {
     width: 288px;
     width: 288px;
-    padding: 0 0 0 84px;
+    padding: 0 0 0 29px;
   }
   .modal__close-btn_type_preview {
     position: fixed;
-    top: 35px;
-    left: 325px;
+    top: 58px;
+    left: 304px;
   }
 
 
   .modal__caption {
     background: rgba(33, 33, 33, 1);
-    margin-left: 84px;
+    margin-left: 28px;
     display: inline-block;
   }
 }
