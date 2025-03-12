@@ -119,13 +119,14 @@
 .modal__container_type_preview {
   padding: 0;
   background-color: transparent;
-  width: unset;
 }
 
 .modal__image {
   object-fit: contain;
   max-width: 80vw;
   max-height: 80vh;
+  display: block;  
+  margin: 0 auto;  
 }
 
 .modal__caption {
@@ -146,6 +147,7 @@
 
   .modal__container {
     padding: 12px;
+    position: relative;
   }
 
   .modal__title {
@@ -173,14 +175,21 @@
   }
 
   .modal__image {
-    width: 288px;
-    width: 288px;
-    padding: 0 0 0 29px;
+    object-fit: contain;
+    max-width: 80vw;
+    max-height: 80vh;
+    display: block; 
+    margin: 0 auto;
   }
+
   .modal__close-btn_type_preview {
-    position: fixed;
-    top: 58px;
-    left: 304px;
+    background-image: url(../images/xiconwhite.svg);
+    position: absolute;
+    top: -34px;
+    right: 81px;
+    height: 40px;
+    width: 40px;
+    background-color: unset;
   }
 
 
