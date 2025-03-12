@@ -119,6 +119,12 @@
 .modal__container_type_preview {
   padding: 0;
   background-color: transparent;
+<<<<<<< HEAD
+=======
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+>>>>>>> 0979c62b6fdf2e5489c6e3762f142eca6dcc77b0
 }
 
 .modal__image {
@@ -148,6 +154,10 @@
   .modal__container {
     padding: 12px;
     position: relative;
+  }
+
+  .modal__container_type_preview {
+    max-width: 314px;
   }
 
   .modal__title {
@@ -198,4 +208,5 @@
     margin-left: 28px;
     display: inline-block;
   }
+
 }
