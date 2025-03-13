@@ -51,8 +51,9 @@
 }
 
 .modal__close-btn_type_preview {
-  background-image: url("../images/xiconwhite.svg");
+  background-image: url("../images/xbtnblack.png");
   top: 0;
+  opacity: 0.4;
   right: -52.5px;
   height: 40px;
   width: 40px;
@@ -61,7 +62,7 @@
 
 .modal__close-btn:hover {
   opacity: 100%;
-  transform: rotate(90deg);
+
 }
 
 .modal__title {
@@ -118,24 +119,22 @@
 .modal__container_type_preview {
   padding: 0;
   background-color: transparent;
-<<<<<<< HEAD
-=======
+  width: fit-content;
   max-width: 80vw;
   max-height: 80vh;
-  object-fit: contain;
->>>>>>> 0979c62b6fdf2e5489c6e3762f142eca6dcc77b0
 }
 
 .modal__image {
   object-fit: contain;
   max-width: 80vw;
   max-height: 80vh;
-  display: block;  
-  margin: 0 auto;  
+  display: block;
+  margin: 0;
+  border-radius: 8px;
 }
 
 .modal__caption {
-  margin-top: 0;
+  margin-top: 8px;
   width: fit-content;
   background: rgba(0, 0, 0, 0.6);
   color: white;
@@ -187,7 +186,7 @@
     object-fit: contain;
     max-width: 80vw;
     max-height: 80vh;
-    display: block; 
+    display: block;
     margin: 0 auto;
   }
 

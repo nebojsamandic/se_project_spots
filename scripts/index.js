@@ -75,7 +75,6 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
 
   const cardLikeBtn = cardElement.querySelector(".card__like-btn");
-  const cardUnLikeBtn = cardElement.querySelector(".card__like-btn_liked");
 
   cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-btn_liked");
@@ -84,6 +83,7 @@ function getCardElement(data) {
   cardImageEl.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
+    previewModalImageEl.alt = data.name;
     previewModalCaptionEl.textContent = data.name;
   });
 
@@ -101,11 +101,11 @@ function fillProfileForm() {
 }
 
 function openModal(modal) {
-  modal.classList.add("modal--opened");
+  modal.classList.add("modal_opened");
 }
 
 function closeModal(modal) {
-  modal.classList.remove("modal--opened");
+  modal.classList.remove("modal_opened");
 }
 
 function handleEditFormSubmit(evt) {
