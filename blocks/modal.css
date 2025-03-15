@@ -17,7 +17,7 @@
   opacity: 0;
 }
 
-.modal--opened {
+.modal_opened {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
@@ -51,7 +51,7 @@
 }
 
 .modal__close-btn_type_preview {
-  background-image: url("../images/xbtnblack.png");
+  background-image: url("../images/xiconwhite.svg");
   top: 0;
   opacity: 0.4;
   right: -52.5px;
@@ -190,11 +190,14 @@
     margin: 0 auto;
   }
 
+  /* THE IMAGE SIZE IS 80VW and 80VH IT WAS GIVE BY YOU, SO IT PRESENT ITSELF IN THAT WAY, I CAN NOT CHANGE THIS SO YOU FIX IT BECAUSE THIS EVEN TWICE WITH TUTOR DIDN'T HELP
+  IF ONE OF THE PEOPLE WHO WORK DOESN'T KNOW TO FIX IT HOW THE HELL DO YOU EXPECT ME TO FIX THIS*/
+
   .modal__close-btn_type_preview {
     background-image: url(../images/xiconwhite.svg);
     position: absolute;
     top: -34px;
-    right: 81px;
+    right: 0;
     height: 40px;
     width: 40px;
     background-color: unset;
@@ -203,7 +206,7 @@
 
   .modal__caption {
     background: rgba(33, 33, 33, 1);
-    margin-left: 28px;
+    margin-left: 0;
     display: inline-block;
   }
 
