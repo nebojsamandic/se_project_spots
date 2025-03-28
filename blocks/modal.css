@@ -73,7 +73,7 @@
 }
 
 .modal__label {
-  display: flex;
+  display: block;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
@@ -105,6 +105,13 @@
   border-radius: 8px;
   border: 1px solid rgba(33, 33, 33, 0.4);
   color: rgba(33, 33, 33, 0.3);
+  margin: 8px 0 0 ;
+}
+
+.modal__error {
+  display: block;
+  color: red;
+  margin-top: 8px;
 }
 
 .modal__input:focus,
@@ -143,6 +150,8 @@
   font-weight: 500;
   font-size: 14px;
 }
+
+
 
 @media screen and (max-width: 630px) {
   .modal {
@@ -190,8 +199,6 @@
     margin: 0 auto;
   }
 
-  /* THE IMAGE SIZE IS 80VW and 80VH IT WAS GIVE BY YOU, SO IT PRESENT ITSELF IN THAT WAY, I CAN NOT CHANGE THIS SO YOU FIX IT BECAUSE THIS EVEN TWICE WITH TUTOR DIDN'T HELP
-  IF ONE OF THE PEOPLE WHO WORK DOESN'T KNOW TO FIX IT HOW THE HELL DO YOU EXPECT ME TO FIX THIS*/
 
   .modal__close-btn_type_preview {
     background-image: url(../images/xiconwhite.svg);
