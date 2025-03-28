@@ -41,7 +41,7 @@ const editModalDescriptionInput = editModal.querySelector(
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
-const cardSubmitBtn = editModal.querySelector(".modal__submit-btn");
+const cardSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 
@@ -58,9 +58,14 @@ function handleAddCardSubmit(evt) {
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
-  cardNameInput.value = "";
-  cardLinkInput.value = "";
-  disableButton(cardSubmitBtn);
+  cardForm.reset();
+  const errorMessages = cardForm.querySelectorAll('.modal__error');
+  errorMessages.forEach((errorMessage) => {
+    errorMessage.textContent = '';
+  });
+  const submitButton = cardForm.querySelector('.modal__submit-btn');
+  disableButton(submitButton);
+  
   closeModal(cardModal);
 }
 
@@ -102,12 +107,23 @@ function fillProfileForm() {
   editModalDescriptionInput.value = profileDescription.textContent;
 }
 
+function handleEscClose(evt) {
+  if (evt.key === 'Escape') {
+    const openedModal = document.querySelector('.modal_opened');
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
 function openModal(modal) {
-  modal.classList.add("modal_opened");
+  modal.classList.add('modal_opened');
+  document.addEventListener('keydown', handleEscClose);
 }
 
 function closeModal(modal) {
-  modal.classList.remove("modal_opened");
+  modal.classList.remove('modal_opened');
+  document.removeEventListener('keydown', handleEscClose);
 }
 
 function handleEditFormSubmit(evt) {
@@ -144,4 +160,14 @@ cardForm.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardList.prepend(cardElement);
+});
+
+const modals = document.querySelectorAll('.modal');
+
+modals.forEach((modal) => {
+  modal.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('modal')) {
+      closeModal(modal);
+    }
+  });
 });

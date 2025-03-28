@@ -21,6 +21,7 @@ const hideInputError = (formEl, inputEl) => {
     errorMsgEl.textContent = "";
 };
 
+
 const checkInputValidity = (formEl, inputEl) => {
     if (!inputEl.validity.valid) {
         showInputError(formEl, inputEl, inputEl.validationMessage);
