@@ -20,6 +20,16 @@ const checkInputValidity = (formEl, inputEl) => {
     }
 };
 
+const toggleButtonState = (inputList, buttonEl) => {
+    if (hasInvalidInput(inputList))  {
+        buttonEl.disabled = true;
+
+    }
+    else (hasValidInput(inputList)) {
+        buttonEl.disabled = false;
+    }
+}
+
 const setEventListeners = (formEl) => {
     const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
     const buttonElement = formEl.querySelector(".modal__button");
