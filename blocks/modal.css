@@ -97,6 +97,10 @@
   opacity: 80%;
 }
 
+.modal__submit-btn:disabled {
+  opacity: 0.5;
+}
+
 .modal__input {
   font-size: 20px;
   line-height: 20px;
@@ -106,6 +110,7 @@
   border: 1px solid rgba(33, 33, 33, 0.4);
   color: rgba(33, 33, 33, 0.3);
   margin: 8px 0 0 ;
+  width: 90%;
 }
 
 .modal__error {
