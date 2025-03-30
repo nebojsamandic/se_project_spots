@@ -101,6 +101,11 @@
   opacity: 0.5;
 }
 
+.modal__submit-btn_disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  }
+
 .modal__input {
   font-size: 20px;
   line-height: 20px;

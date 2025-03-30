@@ -30,7 +30,7 @@ const cardModalBtn = document.querySelector(".profile__add-btn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
-const editModal = document.forms["edit-modal"];
+const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
 const closeButtons = document.querySelectorAll('.modal__close');
 const editModalNameInput = editModal.querySelector("#profile-name-input");
