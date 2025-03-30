@@ -30,9 +30,9 @@ const cardModalBtn = document.querySelector(".profile__add-btn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
-const editModal = document.querySelector("#edit-modal");
+const editModal = document.forms["edit-modal"];
 const editFormElement = editModal.querySelector(".modal__form");
-const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
+const closeButtons = document.querySelectorAll('.modal__close');
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input"
@@ -59,12 +59,11 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
   cardForm.reset();
-  const errorMessages = cardForm.querySelectorAll('.modal__error');
   errorMessages.forEach((errorMessage) => {
     errorMessage.textContent = '';
   });
-  const submitButton = cardForm.querySelector('.modal__submit-btn');
-  disableButton(submitButton);
+  const cardFormSubmitButton = cardForm.querySelector('.modal__submit-btn');
+  disableButton(cardFormSubmitButton);
   
   closeModal(cardModal);
 }
@@ -116,6 +115,7 @@ function handleEscClose(evt) {
   }
 }
 
+
 function openModal(modal) {
   modal.classList.add('modal_opened');
   document.addEventListener('keydown', handleEscClose);
@@ -135,12 +135,14 @@ function handleEditFormSubmit(evt) {
 
 profileEditButton.addEventListener("click", () => {
   fillProfileForm();
+  resetValidation();
   openModal(editModal);
 });
 
-editModalCloseBtn.addEventListener("click", () => {
-  closeModal(editModal);
-});
+ closeButtons.forEach((button) => {
+    const popup = button.closest('.modal');
+    button.addEventListener('click', () => closeModal(popup));
+  });
 
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
@@ -157,10 +159,13 @@ previewModalCloseBtn.addEventListener("click", () => {
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
-initialCards.forEach((item) => {
+
+function renderCard(item, method = "prepend") {
   const cardElement = getCardElement(item);
-  cardList.prepend(cardElement);
-});
+  cardList[ method ](cardElement);
+}
+initialCards.forEach((item) =>
+  renderCard(item));
 
 const modals = document.querySelectorAll('.modal');
 
