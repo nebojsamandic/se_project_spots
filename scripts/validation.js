@@ -1,4 +1,4 @@
-const showInputError = (formEl, inputEl, errorMsg) => {
+const showInputError = (formEl, inputEl, errorMsg, config) => {
     const errorMsgID = inputEl.id + "-error";
     const errorMsgEl = formEl.querySelector("#" + errorMsgID);
     inputEl.classList.add(config.inputErrorClass);
@@ -69,14 +69,14 @@ const setEventListeners = (formEl, config) => {
 
 
 const resetValidation = (formEl, config) => {
-
-    const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
+    const inputList = Array.from(formEl.querySelectorAll(config.inputSelector)); 
     const buttonElement = formEl.querySelector(config.submitButtonSelector);
     inputList.forEach((inputElement) => {
-        hideInputError(formEl, inputElement);
+      hideInputError(formEl, inputElement, config); 
     });
-    toggleButtonState(inputList, buttonElement);
-};
+    toggleButtonState(inputList, buttonElement, config); 
+  };
+  
 
 const enableValidation = (config) => {
     const formList = document.querySelectorAll(config.formSelector);
