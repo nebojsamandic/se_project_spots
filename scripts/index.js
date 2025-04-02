@@ -38,6 +38,12 @@ const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input"
 );
 
+// no clue what your instructions say but they really dont make sense Im completly lost by your instructions cuz they
+// always mess up the code and code after whatever you say doesnt work
+//  and really destroy everything Im working on. either fix it or just pass it on to Knar dont bother me with nonsense when 
+// it just keeps breaking my code, you are no help at all. if you cant do it pass it on to someone else, I won't be resending it.
+
+
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
