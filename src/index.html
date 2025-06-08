@@ -19,11 +19,20 @@
       </header>
       <main class="content">
         <section class="profile page__section">
+          <div class="profile__avatar-container">
+          <button class="profile__avatar-btn"> 
+        <img
+          src="<%= require('./images/pencil.png') %>"
+          alt="Pencil Profile Icon"
+          class="profile__pencil-icon"
+        />
+      </button>
           <img
             src="<%= require('./images/avatar.jpg') %>"
             alt="Avatar Picture in Profile"
             class="profile__avatar"
           />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -158,6 +167,41 @@
         <p class="modal__caption"></p>
       </div>
     </div>
-          <script defer src="main.js"></script>
+<div class="modal" id="avatar-modal">
+        <div class="modal__container">
+          <button
+            class="modal__close-btn"
+            type="button"
+            aria-label="Modal close button"
+          ></button>
+          <h2 class="modal__title">Edit Avatar</h2>
+          <form name="edit-profile" class="modal__form" novalidate>
+            <label for="profile-avatar-input" class="modal__label">
+              Avatar
+              <input
+                id="profile-avatar-input"
+                name="avatar"
+                class="modal__input"
+                placeholder="avatar goes here"
+                required
+              />
+              <span class="modal__error" id="profile-avatar-input-error"></span>
+            </label>
+            <button class="modal__submit-btn" type="submit" aria-label="">
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+              <div class="modal" id="delete-modal">
+          <div class="modal__container">
+            <button class="modal__close-btn" type="button" aria-label="Close"></button>
+            <h2 class="modal__title">Are you sure?</h2>
+            <form class="modal__form" id="delete-form">
+              <button class="modal__submit-btn" type="submit">Yes</button>
+            </form>
+          </div>
+        </div>
+    <script defer src="main.js"></script>
   </body>
 </html>
