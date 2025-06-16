@@ -1,61 +1,47 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: {
-    main: "./src/pages/index.js",
-  },
+  entry: './pages/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
-    publicPath: "",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    assetModuleFilename: 'assets/[hash][ext][query]'
   },
-
-  mode: "development",
-  devtool: "inline-source-map",
-  stats: "errors-only",
-  devServer: {
-    static: path.resolve(__dirname, "./dist"),
-    compress: true,
-    port: 8080,
-    open: true,
-    liveReload: true,
-    hot: false,
-  },
-  target: ["web", "es5"],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      favicon: './images/favicon.ico'
+    }),
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin()
+  ],
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: "babel-loader",
-        exclude: "/node_modules/",
+        exclude: /node_modules/,
+        use: 'babel-loader'
       },
       {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-            },
-          },
-          "postcss-loader",
-        ],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       },
       {
-        test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
-        type: "asset/resource",
+        test: /\.(png|jpe?g|gif|svg|ico)$/i,
+        type: 'asset/resource'
       },
-    ],
+      {
+        test: /\.(woff2?|ttf|eot)$/i,
+        type: 'asset/resource'
+      }
+    ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-  ],
+  devServer: {
+    static: path.resolve(__dirname, 'dist'),
+    open: true,
+    hot: true
+  }
 };
